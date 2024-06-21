@@ -19,15 +19,22 @@
     <dl class="dl-horizontal">
         <dt>@Html.DisplayNameFor(model => model.Id)</dt>
         <dd>@Html.DisplayFor(model => model.Id)</dd>
-
-        <dt>@Html.DisplayNameFor(model => model.Name)</dt>
-        <dd>@Html.DisplayFor(model => model.Name)</dd>
+        <table>
+        <tr>
+                <td><dt>@Html.DisplayNameFor(model => model.Name)</dt></td>
+                <td><dt>@Html.DisplayNameFor(model => model.Quantidade)</dt></td>
+            </tr>
+            <tr>
+                <td><dd>@Html.DisplayFor(model => model.Name)</dd></td>
+                <td><dd>@Html.DisplayFor(model => model.Quantidade)</dd></td>
+            </tr>
+        </table>
 
         <dt>@Html.DisplayNameFor(model => model.Valor)</dt>
         <dd>@Html.DisplayFor(model => model.Valor)</dd>
 
-        <dt>@Html.DisplayNameFor(model => model.Quantidade)</dt>
-        <dd>@Html.DisplayFor(model => model.Quantidade)</dd>
+        
+        
 
         <dt>@Html.DisplayNameFor(model => model.Data)</dt>
         <dd>@Html.DisplayFor(model => model.Data)</dd>
