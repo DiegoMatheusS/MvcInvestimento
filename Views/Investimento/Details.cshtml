@@ -1,0 +1,52 @@
+@model InvestimentoMvc.Models.MoedaViewModel
+@{
+    ViewBag.Title = "Detalhes da Moeda";
+}
+@if (@TempData["Mensagem"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Mensagem"]</div>
+}
+<!--Configuração para exibir mensagem de erro -->
+@if (@TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]</div>
+}<!--Título da página para o navegador-->
+<h2>Detalhes da Moeda</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>@Html.DisplayNameFor(model => model.Id)</dt>
+        <dd>@Html.DisplayFor(model => model.Id)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Name)</dt>
+        <dd>@Html.DisplayFor(model => model.Name)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Valor)</dt>
+        <dd>@Html.DisplayFor(model => model.Valor)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Quantidade)</dt>
+        <dd>@Html.DisplayFor(model => model.Quantidade)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Data)</dt>
+        <dd>@Html.DisplayFor(model => model.Data)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Operacao)</dt>
+        <dd>@Html.DisplayFor(model => model.Operacao)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Imposto)</dt>
+        <dd>@Html.DisplayFor(model => model.Imposto)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Lucro)</dt>
+        <dd>@Html.DisplayFor(model => model.Lucro)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Prejuizo)</dt>
+        <dd>@Html.DisplayFor(model => model.Prejuizo)</dd>
+        
+    </dl>
+</div>
+<p>	
+    @Html.ActionLink("Editar","Edit", new {id = Model.Id})
+    @Html.ActionLink("Retornar", "Index")
+</p>
