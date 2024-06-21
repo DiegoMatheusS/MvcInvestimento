@@ -13,7 +13,7 @@ namespace InvestimentoMvc.Controllers
 {
     public class InvestimentoController : Controller
     {
-        public string uriBase = "http://www.investimento.somee.com/Usuarios/";
+        public string uriBase = "http://www.investimento.somee.com/Investimento/";
 
         [HttpGet]
         public async Task<ActionResult> IndexAsync()
